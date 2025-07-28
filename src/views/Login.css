@@ -72,3 +72,11 @@ html, body, #root {
 .login-form button:hover {
     background-color: #555555;
 }
+
+#errorMessage {
+    color: rgb(211, 18, 18);
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    text-align: center; 
+    visibility: hidden;
+}
