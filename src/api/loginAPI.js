@@ -25,3 +25,29 @@ export async function loginRequest(username, password) {
     const data = await response.json();
     return data.token;
 }
+
+export async function signupRequest(username, password, passwordRepeat) {
+    const response = await fetch(baseUrl+"/user/signup", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password, passwordRepeat })
+    });
+
+    if (!response.ok) {
+        
+        let errorMessage = 'Error en la solicitud de registro';
+        try {
+            const errorData = await response.json();
+            errorMessage = errorData.message || errorMessage;
+        } catch {
+            const text = await response.text();
+            if (text) errorMessage = text;
+        }
+
+        throw new Error(errorMessage);
+    }
+
+    return true;
+
+
+}
