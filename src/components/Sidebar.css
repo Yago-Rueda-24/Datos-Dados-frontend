@@ -1,0 +1,53 @@
+:root {
+    --color-de-fondo: #f4f1e4;
+    --color-de-elementos: #e6dac8;
+    --color-seleccionado: #cbb9a4;
+    --color-activo: #A48D78;
+}
+
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background-color: var(--color-de-fondo);
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #3c2f25;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+  background-color: var(--color-de-elementos);
+}
+
+.sidebar a:hover {
+  background-color: var(--color-seleccionado);
+}
+
+.sidebar a.active {
+  background-color: var(--color-activo);
+  color: white;
+}
+
+.submenu {
+  padding-left: 1rem;
+}
+
+.parent {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+}
