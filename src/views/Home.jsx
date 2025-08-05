@@ -6,7 +6,7 @@ function Home() {
     return (
         <>
             <header className='head'>
-                <h1 className='title'>FinZen</h1>
+                <h1 className='title'>Datos&Dados</h1>
                 <div className='buttons'>
                     <Link to="/login">
                         <button className='login'>Iniciar Sesion</button>
