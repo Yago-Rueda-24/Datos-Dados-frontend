@@ -4,14 +4,22 @@ import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
 const menuItems = [
-  { name: 'Inicio', path: '/dashboard' },
-  { name: 'Finanzas', path: '/dashboard/finanzas' },
-  { name: 'Perfil', path: '/dashboard/perfil' },
+    { name: 'Inicio', path: '/dashboard' },
+    { name: 'Finanzas', path: '/dashboard/finanzas' },
+    { name: 'Perfil', path: '/dashboard/perfil' },
 ];
 
 function Sidebar() {
     return (
         <aside className="sidebar">
+            <div className="sidebar-header">
+                <img src="src/assets/Icon.png" alt="Logo" className="sidebar-logo" />
+                <div className='sidebar-title'>
+                    <p className='enfasis-text'>Mi dashboard</p>
+                    <p className='text'>Panel de control</p>
+                </div>
+            </div>
+            <p className='text'>Menu principal</p>
             <nav>
                 <ul>
                     {menuItems.map((item, idx) => (
@@ -27,6 +35,7 @@ function Sidebar() {
                 </ul>
             </nav>
         </aside>
+
     );
 }
 
