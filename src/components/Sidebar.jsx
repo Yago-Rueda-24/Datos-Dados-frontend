@@ -5,8 +5,9 @@ import './Sidebar.css';
 
 const menuItems = [
     { name: 'Inicio', path: '/dashboard' },
-    { name: 'Finanzas', path: '/dashboard/finanzas' },
-    { name: 'Perfil', path: '/dashboard/perfil' },
+    { name: 'Personajes', path: '/character' },
+    { name: 'Wiki', path: '/wiki' },
+    { name: 'Campañas', path: '/campaigns' },
 ];
 
 function Sidebar() {

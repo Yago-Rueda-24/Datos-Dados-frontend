@@ -1,0 +1,23 @@
+.wikilayout {
+    display: flex;
+}
+.wikicontent {
+    flex: 1;
+}
+
+.wikiheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #c73a3a;
+    border-bottom: 1px solid #ccc;
+}
+
+.wikicategories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}

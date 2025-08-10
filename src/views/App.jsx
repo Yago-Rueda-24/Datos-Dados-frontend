@@ -4,6 +4,8 @@ import Home from './Home.jsx';
 import Login from './Login.jsx';
 import Dashboard from './Dashboard.jsx';
 import Signup from './Signup.jsx';
+import Wiki from './Wiki.jsx';
+import Wikicategory from './Wikicategory.jsx';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/wiki" element={<Wiki />} />
+        <Route path="/wikicategory" element={<Wikicategory />} />
       </Routes>
     </BrowserRouter>
   );
