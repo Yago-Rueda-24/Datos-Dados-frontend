@@ -1,4 +1,4 @@
-import { fetchPersonalSpells } from '../api/spellAPI.js';
+import { fetchPersonalSpells, fetchWOTSpells, fetchPublicpells } from '../api/spellAPI.js';
 
 export async function spellcontroller(activeTab, search) {
     try {
@@ -12,11 +12,12 @@ export async function spellcontroller(activeTab, search) {
             case 'oficial':
                 // Aquí podrías hacer una llamada a la API para obtener hechizos oficiales
                 //const spells = await fetchSpells(activeTab, search);
-                console.log('Cargando hechizos oficiales...');
+                spells = await fetchWOTSpells(search);
                 break;
             case 'homebrew':
                 // Aquí podrías hacer una llamada a la API para obtener hechizos homebrew
                 //const spells = await fetchSpells(activeTab, search);
+                spells = await fetchPublicpells(search);
                 console.log('Cargando hechizos homebrew...');
                 break;
             case 'Tus Hechizos': {

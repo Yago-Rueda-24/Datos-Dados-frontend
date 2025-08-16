@@ -3,11 +3,12 @@ import '../assets/styles/Wikicategory.css';
 import { ArrowLeft, Sparkles, Search } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import SpellCard from '../components/SpellCard.jsx';
-import {spellcontroller} from '../controllers/wikiController.js';
+import { spellcontroller } from '../controllers/wikiController.js';
 function Wikicategory() {
     const [searchTerm, setSearchTerm] = useState('')
     const [activeTab, setActiveTab] = useState('oficial')
     const [spells, setSpells] = useState([]);
+    const [message, setMessage] = useState('');
 
     const busqueda = () => {
         console.log('Función ejecutada');
@@ -16,12 +17,19 @@ function Wikicategory() {
 
         spellcontroller(activeTab, searchTerm)
             .then(spells => {
-                console.log('Hechizos obtenidos:', spells);
-                setSpells(spells);
+                if (spells.length === 0) {
+                    setMessage('No se encontraron hechizos para la búsqueda actual.');
+                    console.log('No se encontraron hechizos para la búsqueda actual.');
+                    setSpells([]);
+                } else {
+                    setSpells(spells);
+                }
             })
             .catch(error => {
+                setMessage('Error al obtener los hechizos.');
+                document.getElementById('message').textContent = error.message || 'Error al obtener los hechizos.';
                 console.error('Error al obtener los hechizos:', error);
-            });    
+            });
     };
 
     useEffect(() => {
@@ -85,8 +93,8 @@ function Wikicategory() {
                             <SpellCard key={index} spell={spell} />
                         ))
                     ) : (
-                        <p style={{gridColumn: '1 / -1',  color: 'white', textAlign: 'center' }}>
-                            No se han encontrado hechizos para la búsqueda .
+                        <p id='message' style={{ gridColumn: '1 / -1', color: 'white', textAlign: 'center' }}>
+                            {message || 'No se encontraron hechizos para la búsqueda actual.'}
                         </p>
                     )}
                 </div>
