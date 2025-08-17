@@ -18,8 +18,8 @@ function Home() {
                 </div>
             </header>
             <section className='hero' >
-                <h1 className='hero-title'>Transforma tu relación con el dinero</h1>
-                <p className='hero-description'>FinZen es la plataforma integral que te ayuda a gestionar tus finanzas personales con inteligencia artificial, análisis avanzado y herramientas intuitivas para alcanzar tus metas financieras.</p>
+                <h1 className='hero-title'>Desata Tu <span className='hero-title-resaltado'>Aventura</span> </h1>
+                <p className='hero-description'>La plataforma definitiva para gestionar partidas de D&D, crear personajes épicos y compartir contenido con una comunidad apasionada de jugadores.</p>
                 <Link to="/signup">
                     <button className='signup'> Comenzar Gratis →</button>
                 </Link>
