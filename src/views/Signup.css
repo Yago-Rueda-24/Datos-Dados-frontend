@@ -10,6 +10,14 @@ html, body, #root {
     width: 100%;
 }
 
+:root {
+    --color1: #f2e9c6;
+    --color2: #f6eee0;
+    --color3: #fda664;
+    --color4: #f04842;
+    --color5: #83563f;
+}
+
 /* Nuevo wrapper para centrar */
 .signup-wrapper {
     display: flex;
@@ -17,11 +25,11 @@ html, body, #root {
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-color: #333333; /* fondo oscuro global */
+    background-color: var(--color2); /* fondo oscuro global */
 }
 
 .signup-container {
-    background-color: #f0f0f0;
+    background-color: var(--color1);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -40,7 +48,7 @@ html, body, #root {
 .signup-container svg {
     width: 2.5rem;
     height: 2.5rem;
-    color: #333333;
+    color: var(--color4);
     margin-bottom: 0.5rem;
 }
 
@@ -63,7 +71,7 @@ html, body, #root {
 .signup-form button {
     padding: 0.75rem;
     font-size: 1rem;
-    background-color: #333333;
+    background-color: var(--color3);
     color: white;
     border: none;
     cursor: pointer;
@@ -71,7 +79,12 @@ html, body, #root {
 }
 
 .signup-form button:hover {
-    background-color: #555555;
+    background-color: #fa9242;
+}
+.input {
+    font-size: 1.2rem;
+    color: var(--color5);
+    font-weight: bold;
 }
 
 #errorMessage {

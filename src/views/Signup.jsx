@@ -32,17 +32,17 @@ function Signup() {
         <div className="signup-wrapper">
             <div className='signup-container'>
                 <Lock ></Lock>
-                <h1>Crear cuenta</h1>
+                <h1 style={{ 'color': '#83563f' }}>Crear cuenta</h1>
                 <p style={{ 'color': '#818181ff' }}>Introduce los datos solicitados para crear una cuenta</p>
                 <form className='signup-form' onSubmit={Signup}>
 
-                    <label htmlFor="username">Nombre de usuario</label>
+                    <label className='input' htmlFor="username">Nombre de usuario</label>
                     <input type="text" id="username" name="username" placeholder='jonhdoe' value={username} onChange={(e) => setUsername(e.target.value)} required />
 
-                    <label htmlFor="password">Contraseña</label>
+                    <label className='input' htmlFor="password">Contraseña</label>
                     <input type="password" id="password" name="password" placeholder='introduce una contraseña' value={password} onChange={(e) => setPassword(e.target.value)} required />
 
-                    <label htmlFor="password"> Repetir Contraseña</label>
+                    <label className='input' htmlFor="password"> Repetir Contraseña</label>
                     <input type="password" id="password" name="password" placeholder='contraseña repetida' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
 
 

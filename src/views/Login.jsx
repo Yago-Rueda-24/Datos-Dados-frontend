@@ -26,14 +26,14 @@ function Login() {
         <div className="login-wrapper">
             <div className='login-container'>
                 <Lock ></Lock>
-                <h1>Iniciar sesión</h1>
+                <h1 style={{ 'color': '#83563f' }} >Iniciar sesión</h1>
                 <p style={{ 'color': '#818181ff' }}>Introduce tus credenciales para iniciar sesión</p>
                 <form className='login-form' onSubmit={log}>
 
-                    <label htmlFor="username">Nombre de usuario</label>
+                    <label className='input' htmlFor="username">Nombre de usuario</label>
                     <input type="text" id="username" name="username" placeholder='jonhdoe' value={username} onChange={(e) => setUsername(e.target.value)} required />
 
-                    <label htmlFor="password">Contraseña</label>
+                    <label className='input' htmlFor="password">Contraseña</label>
                     <input type="password" id="password" name="password" placeholder='password segura' value={password} onChange={(e) => setPassword(e.target.value)} required />
 
                     <button type="submit" id='loginButton'>Login</button>
