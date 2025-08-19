@@ -1,7 +1,16 @@
 /* Contenedor específico de hechizos */
+
+:root {
+    --color1: #f2e9c6;
+    --color2: #f6eee0;
+    --color3: #fda664;
+    --color4: #f04842;
+    --color5: #83563f;
+}
+
 .hechizos-container {
     min-height: 100vh;
-    background: linear-gradient(to bottom right, #2c1b01, #87591c, #2c1b01);
+    background: linear-gradient(to bottom right, var(--color5), var(--color3));
 }
 
 .hechizos-header {
@@ -14,7 +23,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: wheat;
+    color: var(--color1);
 }
 
 
@@ -24,7 +33,7 @@
     gap: 0.5rem;
     text-decoration: none;
     color: inherit;
-    background-color: #87591c;
+    background-color: var(--color5);
     padding: 0.5rem;
     border-radius: 12px;
 
@@ -42,7 +51,7 @@
 }
 
 .sparkles {
-    color: rgb(245, 168, 67);
+    color:var(--color3);
 }
 
 /*Search*/
@@ -79,7 +88,7 @@
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 0.375rem;
-    color: white;
+    color: var(--color1);
     outline: none;
     transition: background-color 0.2s;
 }
@@ -89,7 +98,7 @@
 }
 
 .search-input::placeholder {
-    color: #9ca3af;
+    color: var(--color2);
 }
 
 /*Tab*/
@@ -118,7 +127,7 @@
     padding: 0.5rem 1rem;
     background: transparent;
     border: none;
-    color: #d1d5db;
+    color: var(--color2);
     border-radius: 0.25rem;
     cursor: pointer;
     transition: all 0.2s;

@@ -1,9 +1,31 @@
 .wikilayout {
     display: flex;
+    background-color: var(--color2);
 }
+
 .wikicontent {
     flex: 1;
 }
+
+:root {
+    --color1: #f2e9c6;
+    --color2: #f6eee0;
+    --color3: #fda664;
+    --color4: #f04842;
+    --color5: #83563f;
+}
+.wikiTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color3);
+    margin-bottom: 0.5rem;
+}
+.wikiSubTitle {
+    font-size: 1.2rem;
+    color: var(--color3);
+    margin-bottom: 1rem;
+}
+
 
 .wikiheader {
     display: flex;
@@ -11,7 +33,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background-color: #c73a3a;
+    background-color: var(--color5);
     border-bottom: 1px solid #ccc;
 }
 
@@ -20,4 +42,5 @@
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
     padding: 2rem;
+    
 }

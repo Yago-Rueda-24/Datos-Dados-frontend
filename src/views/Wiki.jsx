@@ -10,8 +10,8 @@ function Wiki() {
                 <Sidebar />
                 <div className='wikicontent'>
                     <header className='wikiheader'>
-                        <h1> Bienvendio a D&D Wiki</h1>
-                        <p>Tu guía completa para el mundo más grande de fantasía. Descubre razas, clases, hechizos y mucho más.</p>
+                        <h1 className='wikiTitle'> Bienvendio a D&D Wiki</h1>
+                        <p className='wikiSubTitle'>Tu guía completa para el mundo más grande de fantasía. Descubre razas, clases, hechizos y mucho más.</p>
                     </header>
                     <div className='wikicategories'>
                         <CategoryCard title="Razas" description="Explora las razas del universo de D&D." />

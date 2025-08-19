@@ -4,6 +4,7 @@ import { ArrowLeft, Sparkles, Search } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import SpellCard from '../components/SpellCard.jsx';
 import { spellcontroller } from '../controllers/wikiController.js';
+
 function Wikicategory() {
     const [searchTerm, setSearchTerm] = useState('')
     const [activeTab, setActiveTab] = useState('oficial')
