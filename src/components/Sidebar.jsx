@@ -2,6 +2,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
+import { Dice1, Dice6 } from "lucide-react"
 
 const menuItems = [
     { name: 'Inicio', path: '/dashboard' },
@@ -14,11 +15,11 @@ function Sidebar() {
     return (
         <aside className="sidebar">
             <div className="sidebar-header">
-                <img src="src/assets/Icon.png" alt="Logo" className="sidebar-logo" />
-                <div className='sidebar-title'>
-                    <p className='enfasis-text'>Mi dashboard</p>
-                    <p className='text'>Panel de control</p>
+                <div className='dices'>
+                    <Dice6 className='dice6' />
+                    <Dice1 className='dice1' />
                 </div>
+                <p className='dashboard-title'>Datos&Dados</p>
             </div>
             <p className='text'>Menu principal</p>
             <nav>
