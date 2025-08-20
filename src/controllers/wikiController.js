@@ -1,4 +1,4 @@
-import { fetchPersonalSpells, fetchWOTSpells, fetchPublicpells } from '../api/spellAPI.js';
+import { fetchPersonalSpells, fetchWOTSpells, fetchPublicpells,fetchSpell } from '../api/spellAPI.js';
 
 export async function spellcontroller(activeTab, search) {
     try {
@@ -35,3 +35,13 @@ export async function spellcontroller(activeTab, search) {
     }
 
 }
+
+export async function getSpellControllerByID(id){
+    try {
+        const spells = await fetchSpell(id);
+        return spells;
+    } catch (error) {
+        console.error('Error al obtener los hechizos:', error);
+        throw error;
+    }
+} 
