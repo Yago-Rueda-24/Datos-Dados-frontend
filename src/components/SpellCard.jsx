@@ -1,7 +1,14 @@
 import '../assets/styles/Spellcard.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 function SpellCard({ spell }) {
 
+    const navigate = useNavigate();
+    function obtainSpell(id) {
+        navigate(`/wiki/spell/${spell.id}`);
+        console.log('Obtener hechizo con ID:', id);
+
+    }
 
     const knownSchools = [
         'abjuration',
@@ -19,21 +26,21 @@ function SpellCard({ spell }) {
     const schoolClass = `school ${isKnown ? `school-${normalizedSchool}` : 'school-unknown'}`;
 
     return (
-        <div className="spell-card">
-            <div className='spell-card-header'>
+        <div onClick={() => obtainSpell(spell.id)} className="spell-card-component">
+            <div className='spell-card-component-header'>
                 <h3 style={{ color: 'white', fontSize: '1.5rem' }}>{spell.name}</h3>
                 <span className='level' >Nivel {spell.level}</span>
             </div>
             <div className={schoolClass}>{spell.school}</div>
-            <div className='spell-card-details'>
+            <div className='spell-card-component-details'>
                 <p>Tiempo de lanzamiento: {spell.castTime}</p>
                 <p>Alcance: {spell.castRange}</p>
                 <p>Components: {spell.components}</p>
                 <p>Duration: {spell.duration}</p>
             </div>
-            <p style={{color:'#d1d5db'}}>{spell.description}</p>
+            <p style={{ color: '#d1d5db' }}>{spell.description}</p>
 
-            <div className='spell-card-footer'>
+            <div className='spell-card-component-footer'>
                 <span> Spell ID : {spell.id}</span>
             </div>
         </div>

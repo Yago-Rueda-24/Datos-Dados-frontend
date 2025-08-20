@@ -1,4 +1,4 @@
-.spell-card {
+.spell-card-component {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -7,8 +7,13 @@
     overflow: hidden;
     padding: 2rem;
 }
+.spell-card-component:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
 
-.spell-card-header {
+.spell-card-component-header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,7 +31,7 @@
     border-radius: 0.3rem;
 }
 
-.spell-card-details {
+.spell-card-component-details {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
@@ -99,7 +104,7 @@
 }
 
 
-.spell-card-footer{
+.spell-card-component-footer{
     color: #d1d5db;
     font-size: 1.1rem;
     margin-top: 1rem;
