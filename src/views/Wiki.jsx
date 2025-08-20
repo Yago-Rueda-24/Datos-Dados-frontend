@@ -14,10 +14,10 @@ function Wiki() {
                         <p className='wikiSubTitle'>Tu guía completa para el mundo más grande de fantasía. Descubre razas, clases, hechizos y mucho más.</p>
                     </header>
                     <div className='wikicategories'>
-                        <CategoryCard title="Razas" description="Explora las razas del universo de D&D." />
-                        <CategoryCard title="Clases" description="Descubre las clases que existen en D&D." />
-                        <CategoryCard title="Hechizos" description="Compendio de hechizos mágicos." />
-                        <CategoryCard title="Monstruos" description="Recopilcaión de bestias y enemigos" />
+                        <CategoryCard title="Razas" description="Explora las razas del universo de D&D." to="/wiki/spells" />
+                        <CategoryCard title="Clases" description="Descubre las clases que existen en D&D." to="/wiki/spells" />
+                        <CategoryCard title="Hechizos" description="Compendio de hechizos mágicos." to="/wiki/spells" />
+                        <CategoryCard title="Monstruos" description="Recopilcaión de bestias y enemigos" to="/wiki/spells" />
                     </div>
                 </div>
             </div>
