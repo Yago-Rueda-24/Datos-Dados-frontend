@@ -7,6 +7,7 @@ import Signup from './Signup.jsx';
 import Wiki from './Wiki.jsx';
 import Wikicategory from './Wikicategory.jsx';
 import SpellPage from './Wiki/SpellPage.jsx';
+import EditSpellPage from './Wiki/EditSpellPage.jsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/wiki" element={<Wiki />} />
         <Route path="/wiki/spells" element={<Wikicategory />} />
         <Route path="/wiki/spell/:id" element={<SpellPage />} />
+        <Route path="/wiki/spell/edit/" element={<EditSpellPage />} />
       </Routes>
     </BrowserRouter>
   );
