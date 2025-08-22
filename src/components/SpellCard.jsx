@@ -20,15 +20,16 @@ function SpellCard({ spell }) {
         'necromancy',
         'transmutation'
     ];
-
+    //Selector de escuela de magia
     const normalizedSchool = spell.school?.toLowerCase().replace(/\s+/g, '-') || 'unknown';
     const isKnown = knownSchools.includes(normalizedSchool);
     const schoolClass = `school ${isKnown ? `school-${normalizedSchool}` : 'school-unknown'}`;
-
+    
+    //Parse de componentes
     return (
         <div onClick={() => obtainSpell(spell.id)} className="spell-card-component">
             <div className='spell-card-component-header'>
-                <h3 style={{ color: 'white', fontSize: '1.5rem' }}>{spell.name}</h3>
+                <h3 >{spell.name}</h3>
                 <span className='level' >Nivel {spell.level}</span>
             </div>
             <div className={schoolClass}>{spell.school}</div>
@@ -38,7 +39,7 @@ function SpellCard({ spell }) {
                 <p>Components: {spell.components}</p>
                 <p>Duration: {spell.duration}</p>
             </div>
-            <p style={{ color: '#d1d5db' }}>{spell.description}</p>
+            <p className='spell-card-component-description'>{spell.description}</p>
 
             <div className='spell-card-component-footer'>
                 <span> Spell ID : {spell.id}</span>
