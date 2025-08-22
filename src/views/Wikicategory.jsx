@@ -89,6 +89,11 @@ function Wikicategory() {
                     </div>
                 </div>
                 <div className='card-grid'>
+                    {activeTab === 'Tus Hechizos' && (
+                        <button className='addSpell' onClick={() => window.location.href = '/wiki/spell/edit'}>
+                            <span className='addSpellTag'>Añadir Hechizo</span>
+                        </button>
+                    )}
                     {spells.length > 0 ? (
                         spells.map((spell, index) => (
                             <SpellCard key={index} spell={spell} />
